@@ -2,7 +2,7 @@
 
 ## Informations
 
-** Note: this package is only using for "Discord.js" **
+**Note: this package is only using for "Discord.js"
 
 - How can i install the package ?
 
