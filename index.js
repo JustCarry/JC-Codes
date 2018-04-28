@@ -1,5 +1,5 @@
 let codes = {
-	1: "Ping.js",
+	1: "MessageAR.js",
 	2: "Greeting.js"
 };
 var events = {
