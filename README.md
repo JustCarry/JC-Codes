@@ -9,23 +9,31 @@ By writing ``npm i jc-codes`` command!
 
 - How can i use the package ?
 
+require the package then write ``<packagename>.setClient(<client>);``
 
-Easy, simple..
 
-First thing require my package then write ``<packagename>.use(<codenumber>,<options>);``
+then write the code you wanna exec ``<packagename>.add(<codenumber>[,<options>])``
+
+
+then exec it! ``<packagename>.exec()``
+
 
 Ex. 
 ```js
 const Discord = require('discord.js');
 const jc = require('jc-codes');
 const client = new Discord.client();
-jc.use(1, {client: client, message: 'Pong!'}); // Using ping pong code
+
+jc.setClient( client ) // Put client
+jc.add(1, { message: 'ping', reply: 'Pong!', type: 1 }); // Using ping pong code
+jc.add(2, { message: 'Welcome [user]! We hope to enjoy with our server' }); // Using greeting code
+jc.exec( ); // Exec codes
 
 client.login('token');
 ```
 
 
-- How can i know code number ?
+- Where i can found codes with it code number?
 
 In wiki: [From here](https://github.com/JustCarry/JC-Codes/wiki)
 
