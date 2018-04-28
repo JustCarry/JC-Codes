@@ -2,6 +2,8 @@
 
 ## Informations
 
+** Note: this package is only using for "Discord.js" **
+
 - How can i install the package ?
 
 By writing ``npm i jc-codes`` command!
@@ -11,12 +13,12 @@ By writing ``npm i jc-codes`` command!
 
 Easy, simple..
 
-First thing require my package then write ``<packagename>.use(<codenumber>);``
+First thing require my package then write ``<packagename>.use(<codenumber>,<options>);``
 
 Ex. 
 ```js
 const jc = require('jc-codes');
-jc.use(1); // Using ping pong code
+jc.use(1, {client}); // Using ping pong code
 ```
 
 
