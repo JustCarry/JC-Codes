@@ -2,7 +2,6 @@
 
 ## Informations
 
-**Note: this package is only using for "Discord.js"**
 
 - How can i install the package ?
 
@@ -26,4 +25,6 @@ jc.use(1, {client}); // Using ping pong code
 
 In wiki: [From here](https://github.com/JustCarry/JC-Codes/wiki)
 
+
+**Note: this package is only using for "Discord.js"**
 
