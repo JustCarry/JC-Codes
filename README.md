@@ -16,8 +16,12 @@ First thing require my package then write ``<packagename>.use(<codenumber>,<opti
 
 Ex. 
 ```js
+const Discord = require('discord.js');
 const jc = require('jc-codes');
-jc.use(1, {client}); // Using ping pong code
+const client = new Discord.client();
+jc.use(1, {client: client}); // Using ping pong code
+
+client.login('token');
 ```
 
 
