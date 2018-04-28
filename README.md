@@ -33,10 +33,14 @@ client.login('token');
 ```
 
 
+
 - Where i can found codes with it code number?
 
 In wiki: [From here](https://github.com/JustCarry/JC-Codes/wiki)
 
+## Author
+
+Discord: **JustCarry#2616**
 
 **Note: this package is only using for "Discord.js"**
 
