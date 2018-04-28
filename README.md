@@ -26,7 +26,7 @@ const client = new Discord.client();
 
 jc.setClient( client ) // Put client
 jc.add(1, { message: 'ping', reply: 'Pong!', type: 1 }); // Using ping pong code
-jc.add(2, { message: 'Welcome [user]! We hope to enjoy with our server' }); // Using greeting code
+jc.add(2, { channel: 'channel-id', message: 'Welcome [user]! We hope to enjoy with our server' }); // Using greeting code
 jc.exec( ); // Exec codes
 
 client.login('token');
