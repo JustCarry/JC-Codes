@@ -19,7 +19,7 @@ Ex.
 const Discord = require('discord.js');
 const jc = require('jc-codes');
 const client = new Discord.client();
-jc.use(1, {client: client}); // Using ping pong code
+jc.use(1, {client: client, message: 'Pong!'}); // Using ping pong code
 
 client.login('token');
 ```
