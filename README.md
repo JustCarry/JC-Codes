@@ -1,6 +1,7 @@
 # JC-Codes
 
-# Informations
+## Informations
+
 - How can i install the package ?
 
 By writing ``npm i jc-codes`` command!
@@ -21,4 +22,6 @@ jc.use(1); // Using ping pong code
 
 - How can i know code number ?
 
-In wiki: [Here](https://github.com/JustCarry/JC-Codes/wiki)
+In wiki: [From here](https://github.com/JustCarry/JC-Codes/wiki)
+
+
