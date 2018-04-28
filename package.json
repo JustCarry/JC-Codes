@@ -1,0 +1,14 @@
+{
+  "name": "jc-codes",
+  "version": "0.0.301",
+  "description": "JC-Codes! Codes for begginers",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "ready-codes"
+  ],
+  "author": "JustCarry",
+  "license": "ISC"
+}
