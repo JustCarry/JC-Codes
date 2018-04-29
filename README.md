@@ -12,21 +12,22 @@ By writing ``npm i jc-codes`` command!
 require the package then write ``<packagename>.setClient(<client>);``
 
 
-then write the code you wanna exec ``<packagename>.add(<codenumber>[,<options>])``
+then write the code you wanna exec ``<packagename>.add(<codeName>,<options>)``
 
 
 then exec it! ``<packagename>.exec()``
 
 
-Ex. 
+### Example: 
 ```js
 const Discord = require('discord.js');
 const jc = require('jc-codes');
 const client = new Discord.client();
 
 jc.setClient( client ) // Put client
-jc.add(1, { message: 'ping', reply: 'Pong!', type: 1 }); // Using ping pong code
-jc.add(2, { channel: 'channel-id', message: 'Welcome [user]! We hope to enjoy with our server' }); // Using greeting code
+jc.add('onMessage', { message: 'ping', reply: '[user], Pong!' }); // Using onMessage code, example for ping pong,
+jc.add('onJoin', { message: 'Welcome there, [user] have joined to our server', role: jc.getRole('New member', 'guild-id') } )
+jc.getRole('New member', 'guild-id'); // Returns the id of 'New member' role
 jc.exec( ); // Exec codes
 
 client.login('token');
@@ -34,13 +35,14 @@ client.login('token');
 
 
 
-- Where i can found codes with it code number?
+- How can i use all of this?
 
 In wiki: [From here](https://github.com/JustCarry/JC-Codes/wiki)
 
 ## Author
 
 Discord: **JustCarry#2616**
+Github: [JC-Codes](https://github.com/JustCarry/JC-Codes)
 
 
 
