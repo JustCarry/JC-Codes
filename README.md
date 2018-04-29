@@ -26,8 +26,7 @@ const client = new Discord.client();
 
 jc.setClient( client ) // Put client
 jc.add('onMessage', { message: 'ping', reply: '[user], Pong!' }); // Using onMessage code, example for ping pong,
-jc.add('onJoin', { message: 'Welcome there, [user] have joined to our server', role: jc.getRole('New member', 'guild-id') } )
-jc.getRole('New member', 'guild-id'); // Returns the id of 'New member' role
+jc.add('onJoin', { message: 'Welcome there, [user] have joined to our server', channel: 'channel-id', role: 'role-id' } )
 jc.exec( ); // Exec codes
 
 client.login('token');
