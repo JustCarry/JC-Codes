@@ -22,7 +22,7 @@ then exec it! ``<packagename>.exec()``
 ```js
 const Discord = require('discord.js');
 const jc = require('jc-codes');
-const client = new Discord.client();
+const client = new Discord.Client();
 
 jc.setClient( client ) // Put client
 jc.add('onMessage', { message: 'ping', reply: '[user], Pong!' }); // Using onMessage code, example for ping pong,
