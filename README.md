@@ -48,6 +48,5 @@ Github: [JC-Codes](https://github.com/JustCarry/JC-Codes)
 
 
 
-
 **Note: this package is only using for "Discord.js"**
 
