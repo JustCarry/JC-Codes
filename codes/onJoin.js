@@ -1,4 +1,5 @@
 const Error = require( './error.js' );
+const Inviter = require( './getInviter.js' );
 module.exports.got = false;
 module.exports.get = function ( options ){
 	if( this.got == true ) return;
@@ -11,7 +12,7 @@ module.exports.get = function ( options ){
 			for( var i = 0; i<options.length; i++ ){
 				if( options[i].func ){
 					
-					options[i].func(args);
+					options[i].func(args[0]);
 					
 				} else {
 					if( options[i].channel == undefined || options[i].message == undefined ) return Error( 'You need to put all arguments correct', 'onJoin' );
@@ -19,13 +20,15 @@ module.exports.get = function ( options ){
 						member.addRole( options[i].role );
 					}
 					let channel = member.guild.channels.get(options[i].channel);
-					channel.send( options[i].message.replace('[user]',member) );
+					Inviter.getInviter( member, function ( inviter ) {
+						return channel.send( options[i].message.replace('[user]',member).replace('[inviter]',inviter) );
+					});
 				}
 			}
 		} else {
 			if( options.func ){
 					
-				return options.func(args);
+				return options.func(args[0]);
 				
 			} else {
 				if( options.channel == undefined || options.message == undefined ) return Error( 'You need to put all arguments correct', 'onJoin' );
@@ -33,7 +36,9 @@ module.exports.get = function ( options ){
 					member.addRole( options.role );
 				}
 				let channel = member.guild.channels.get(options.channel);
-				return channel.send( options.message.replace('[user]',member) );
+				Inviter.getInviter( member, function ( inviter ) {
+					return channel.send( options.message.replace('[user]',member).replace('[inviter]',inviter) );
+				});
 			}
 		}
 	}, "guildMemberAdd" ];

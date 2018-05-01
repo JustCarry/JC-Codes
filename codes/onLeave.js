@@ -10,7 +10,7 @@ module.exports.get = function ( options ){
 			for( var i = 0; i<options.length; i++ ){
 				if( options[i].func ){
 					
-					options[i].func(args);
+					options[i].func(args[0]);
 					
 				} else {
 					if( options[i] == undefined || options[i].channel == undefined || options[i].message == undefined ) return Error( 'You need to put all arguments correct', 'onLeave' );
@@ -21,7 +21,7 @@ module.exports.get = function ( options ){
 		} else {
 			if( options.func ){
 					
-				return options.func(args);
+				return options.func(args[0]);
 				
 			} else {
 				if( options == undefined || options.channel == undefined || options.message == undefined ) return Error( 'You need to put all arguments correct', 'onLeave' );

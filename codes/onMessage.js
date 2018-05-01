@@ -12,7 +12,7 @@ module.exports.get = function ( options ){
 				for( var i = 0; i<options.length; i++ ){
 					if( options[i].func ){
 
-						options[i].func(args);
+						options[i].func(args[0]);
 
 					} else {
 						if( options[i].message == undefined || options[i].reply == undefined ) return Error( 'You need to put all arguments correct', 'onMessage' );
@@ -37,8 +37,7 @@ module.exports.get = function ( options ){
 			} else {
 
 				if( options.func ){
-
-					return options.func(args);
+					return options.func(args[0]);
 
 				} else {
 					let message = args[0]
