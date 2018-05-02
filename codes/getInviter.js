@@ -7,7 +7,7 @@ module.exports.start = function ( ) {
 	this.client.guilds.forEach( ( g ) => { 
 		g.fetchInvites().then( ( i ) => {
 			i.forEach( ( invite ) => {
-				JSON[ invite.code ] = 0;
+				JSON[ invite.code ] = invite.uses;
 			});
 		});
 	});
@@ -19,8 +19,8 @@ module.exports.getInviter = function ( member, callback ){
 		i.forEach( ( invite ) => {
 			if( invite.uses > JSON[ invite.code ] ){
 				if( inviter == false ) {
-				callback(invite.inviter);
-				inviter = true;
+					callback(invite.inviter);
+					inviter = true;
 				}
 			}
 		});

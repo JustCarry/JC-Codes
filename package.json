@@ -1,12 +1,16 @@
 {
   "name": "jc-codes",
-  "version": "0.0.336",
+  "version": "0.0.338",
   "description": "JC-Codes! JustCarry Codes for begginers  ( Consider to LifeTeam )",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": ["discord.js","discord","bot"],
+  "keywords": [
+    "discord.js",
+    "discord",
+    "bot"
+  ],
   "author": "JustCarry",
   "license": "ISC",
   "dependencies": {

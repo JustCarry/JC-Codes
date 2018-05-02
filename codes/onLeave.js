@@ -14,8 +14,8 @@ module.exports.get = function ( options ){
 					
 				} else {
 					if( options[i] == undefined || options[i].channel == undefined || options[i].message == undefined ) return Error( 'You need to put all arguments correct', 'onLeave' );
-					let channel = member.guild.channels.get(options[i].channel);
-					channel.send( options[i].message.replace('[user]',member) );
+					let channel = member.guild.channels.get(options[i].channel) || member.guild.channels.find('name', options[i].channel);
+					channel.send( options[i].message.replace('[user]',member).replace('[server]',member.guild.name) );
 				}
 			}
 		} else {
@@ -25,8 +25,8 @@ module.exports.get = function ( options ){
 				
 			} else {
 				if( options == undefined || options.channel == undefined || options.message == undefined ) return Error( 'You need to put all arguments correct', 'onLeave' );
-				let channel = member.guild.channels.get(options.channel);
-				return channel.send( options.message.replace('[user]',member) );
+				let channel = member.guild.channels.get(options.channel) || member.guild.channels.find('name', options.channel);
+				return channel.send( options.message.replace('[user]',member).replace('[server]',member.guild.name) );
 			}
 		}
 	}, "guildMemberRemove" ];

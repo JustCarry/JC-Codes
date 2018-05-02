@@ -17,13 +17,13 @@ module.exports.get = function ( options ){
 					} else {
 						if( options[i].message == undefined || options[i].reply == undefined ) return Error( 'You need to put all arguments correct', 'onMessage' );
 						if( message.content == options[i].message ){
-							if( AntiSpam[ message.member ] ) return message.channel.send( options[i].spamMessage.replace('[user]',message.author) );
+							if( AntiSpam[ message.member ] ) return message.channel.send( options[i].spamMessage.replace('[user]',message.author).replace('[server]',message.guild.name) );
 							if( options[i].spam != undefined ){
 								AntiSpam[ message.member ] = setTimeout( function ( ){
 									AntiSpam[ message.member ] = undefined;
 								},options[i].spam);
 							}
-							message.channel.send(options[i].reply.replace('[user]',message.author));
+							message.channel.send(options[i].reply.replace('[user]',message.author).replace('[server]',message.guild.name));
 							if( !message.guild ) return;
 							if( options[i].addRole ){
 								message.member.addRole( options[i].addRole );
@@ -43,13 +43,13 @@ module.exports.get = function ( options ){
 					let message = args[0]
 					if( options.message == undefined || options.reply == undefined ) return Error( 'You need to put all arguments correct', 'onMessage' );
 					if( message.content == options.message ){
-						if( AntiSpam[ message.member ] ) return message.channel.send( options.spamMessage.replace('[user]',message.author) );
+						if( AntiSpam[ message.member ] ) return message.channel.send( options.spamMessage.replace('[user]',message.author).replace('[server]',message.guild.name) );
 						if( options.spam != undefined ){
 							AntiSpam[ message.member ] = setTimeout( function ( ){
 								AntiSpam[ message.member ] = undefined;
 							},options.spam);
 						}
-						message.channel.send(options.reply.replace('[user]',message.author));
+						message.channel.send(options.reply.replace('[user]',message.author).replace('[server]',message.guild.name));
 						if( !message.guild ) return;
 						if( options.addRole ){
 							message.member.addRole( options.addRole );
