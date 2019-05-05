@@ -1,5 +1,5 @@
-# JC-Codes ( NEW VERSION SOON [JCDiscord] )
-
+# JC-Codes
+### New Version Soon "JCDiscord"
 ## Informations
 
 
@@ -41,8 +41,6 @@ In wiki: [From here](https://github.com/JustCarry/JC-Codes/wiki)
 ## Author
 
 Discord: **JustCarry#2616**
-
-Offical discord server: **https://discord.gg/65HZmse**
 
 Github: [JC-Codes](https://github.com/JustCarry/JC-Codes)
 
