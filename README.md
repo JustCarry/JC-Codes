@@ -1,4 +1,4 @@
-# JC-Codes
+# JC-Codes ( NEW VERSION SOON [JCDiscord] )
 
 ## Informations
 
