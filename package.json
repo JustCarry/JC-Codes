@@ -1,7 +1,7 @@
 {
   "name": "jc-codes",
   "version": "0.0.338",
-  "description": "JC-Codes! JustCarry Codes for begginers  ( Consider to LifeTeam )",
+  "description": "JC-Codes! JustCarry Codes for begginers",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
